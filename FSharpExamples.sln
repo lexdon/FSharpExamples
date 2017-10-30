@@ -35,15 +35,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wsdl", "Wsdl", "{95E0E9BF-A693-43ED-AF89-C2E372CEB705}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{BC914B60-63CC-4A9D-8676-5775636DB17C}"
-	ProjectSection(SolutionItems) = preProject
-		Databases\TestDatabase.mdf = Databases\TestDatabase.mdf
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceLibraryExample", "WcfServiceLibraryExample\WcfServiceLibraryExample.csproj", "{ACE2981A-713F-4CEC-84C9-DEBF0F4E42B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostedService", "SelfHostedService\SelfHostedService.csproj", "{58AF0641-629E-43C6-9FF3-3FE368F4C975}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SqlProgrammabilityProviderExample", "SqlProgrammabilityProviderExample\SqlProgrammabilityProviderExample.fsproj", "{1AE20FA5-E667-4284-93DA-07277A9083B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Databases", "Databases", "{C4D83D70-9778-41EF-ADB4-777818FDCCAE}"
+	ProjectSection(SolutionItems) = preProject
+		Databases\TestDatabase.mdf = Databases\TestDatabase.mdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

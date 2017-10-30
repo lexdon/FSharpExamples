@@ -6,9 +6,9 @@ open FSharp.Data.Sql
 
 let [<Literal>] connectionString = 
     @"Data Source=(LocalDB)\MSSQLLocalDB;
-      AttachDbFilename=C:\dev\dotnet\FSharpExamples\Databases\TestDatabase.mdf;
-      Integrated Security=True;
-      Connect Timeout=30"
+    AttachDbFilename=C:\dev\dotnet\FSharpExamples\Databases\TestDatabase.mdf;
+    Integrated Security=True;
+    Connect Timeout=30"
 
 type sql = SqlDataProvider<
             DatabaseVendor = Common.DatabaseProviderTypes.MSSQLSERVER,
