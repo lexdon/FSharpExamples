@@ -1,4 +1,4 @@
-﻿namespace ExampleConsoleApplication.AssemblyInfo
+﻿namespace SqlProviderExample.AssemblyInfo
 
 open System.Reflection
 open System.Runtime.CompilerServices
@@ -7,11 +7,11 @@ open System.Runtime.InteropServices
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[<assembly: AssemblyTitle("ExampleConsoleApplication")>]
+[<assembly: AssemblyTitle("SqlProviderExample")>]
 [<assembly: AssemblyDescription("")>]
 [<assembly: AssemblyConfiguration("")>]
 [<assembly: AssemblyCompany("")>]
-[<assembly: AssemblyProduct("ExampleConsoleApplication")>]
+[<assembly: AssemblyProduct("SqlProviderExample")>]
 [<assembly: AssemblyCopyright("Copyright ©  2017")>]
 [<assembly: AssemblyTrademark("")>]
 [<assembly: AssemblyCulture("")>]
@@ -22,7 +22,7 @@ open System.Runtime.InteropServices
 [<assembly: ComVisible(false)>]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[<assembly: Guid("23b09f9e-ecf6-413b-b6af-abbe5fe24f84")>]
+[<assembly: Guid("eb6ac571-78e8-4743-b5fd-c370a098d91e")>]
 
 // Version information for an assembly consists of the following four values:
 // 
