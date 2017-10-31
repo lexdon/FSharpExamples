@@ -6,7 +6,7 @@ open FSharp.Data.TypeProviders
 
 type calculatorService = WsdlService<"http://www.dneonline.com/calculator.asmx?wsdl">
 
-type helloService = WsdlService<"http://localhost:8080/hello?WSDL">
+type helloService = WsdlService<"http://localhost:8080/hello?wsdl">
 
 [<EntryPoint>]
 let main _ = 
@@ -15,7 +15,7 @@ let main _ =
     printf "Hello Service\n"
     printf "-------------\n"
 
-    let helloClient = helloService.GetBasicHttpBinding_IHelloWorldService()
+    use helloClient = helloService.GetBasicHttpBinding_IHelloWorldService()
 
     let helloWorldResult = helloClient.SayHelloWorld()
 
@@ -42,7 +42,7 @@ let main _ =
     printf "\nCalculator Service\n"
     printf "------------------\n"
 
-    let calculatorClient = calculatorService.GetCalculatorSoap()
+    use calculatorClient = calculatorService.GetCalculatorSoap()
 
     let additionResult = calculatorClient.Add(10, 15)
 
