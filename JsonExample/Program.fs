@@ -9,21 +9,44 @@
 open System
 open FSharp.Data
 
-type PostFromUrl = 
-    JsonProvider<"https://jsonplaceholder.typicode.com/posts/1", RootName="post">
+[<Literal>]
+let getPostURL = "https://jsonplaceholder.typicode.com/posts/1"
 
-type AllPostsFromUrl = 
-    JsonProvider<"https://jsonplaceholder.typicode.com/posts">
+[<Literal>]
+let getAllPostsURL = "https://jsonplaceholder.typicode.com/posts"
+
+type GetPostFromURL = JsonProvider<getPostURL, RootName="post">
+
+type GetAllPostsFromURL = JsonProvider<getAllPostsURL>
 
 [<EntryPoint>]
 let main _ = 
     
-    let post2 = PostFromUrl.Load("https://jsonplaceholder.typicode.com/posts/2")
-    let allPosts = AllPostsFromUrl.GetSamples()
+    // Get post with ID 1
+    printfn "Get Post with ID 1"
+    printfn "------------------"
 
-    let newPost = PostFromUrl.Post(1, 1, "title!", "body!")
+    let post1 = GetPostFromURL.Load(getPostURL)
+    
+    printfn "%A" post1
 
-    printfn "%A" post2
+    // Get all posts (and take 3)
+    printfn "\nGet all posts (and take 3)"
+    printfn "----------------------------"
+
+    GetAllPostsFromURL.Load(getAllPostsURL) 
+    |> Array.take 3
+    |> Array.iter (printfn "%A")
+
+    // Create new post
+    printfn "\nCreate new post"
+    printfn "----------------"
+
+    let newPost = GetPostFromURL.Post(1, 1, "title!", "body!")
+
+    let postResponse = newPost.JsonValue.Request "https://jsonplaceholder.typicode.com/posts"
+
+    printfn "PostResponse: %A" postResponse
     
     Console.ReadKey() |> ignore
     0 // return an integer exit code
